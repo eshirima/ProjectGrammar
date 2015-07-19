@@ -7,9 +7,9 @@ _app.initGui = function() {
 
 _app.formSubmission = function (event) {
    event.preventDefault();
-   var val = $("#textarea").text();
+   var val = document.getElementById("inputarea").value;
    var params = [
-       {'name': 'key', value:'xyz'},
+       {'name': 'key', value:'810ff583bed6266bc7cec7781b49cfc9'},
        {'name': 'txt', value:val}
    ];
     console.log("Got Submission");
