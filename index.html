@@ -7,6 +7,10 @@
         <meta name="description" content="Grammar">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel=stylesheet href="styles/style.css">
+       <script src="js/app-config.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+       <script src="js/nimble-raw.js"></script>
+       <script src="js/main.js"></script>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
@@ -24,13 +28,14 @@
                 <br>
                 <label for="name">Input:</label>
             </div>
-            <div>   
-                <textarea id="input" cols="40" rows="8" name="textarea" id="textarea"></textarea>
+            <div> 
+                <textarea id="inputarea" cols="40" rows="8" name="textarea" form="inputform"></textarea>
             </div>
-        
             
             <div>
-                <input type="submit" value="Submit" />
+                <form id="inputform">
+                    <input type="submit" value="Submit" id="submitbtn"/>
+                </form>
             </div>
             
             <div>
@@ -47,6 +52,10 @@
 
 
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+
+        <script>
+            $("#submitbtn").click(_app.formSubmission);
+        </script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
