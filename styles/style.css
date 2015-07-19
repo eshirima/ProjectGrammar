@@ -1,1 +1,47 @@
-/* CSS Code */
+/* line 14, ../sass/style.scss */
+:root {
+  height: 100vh;
+}
+
+/* line 18, ../sass/style.scss */
+.centeredHorizontally, .centered {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 27, ../sass/style.scss */
+.centered {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 33, ../sass/style.scss */
+.fullContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /*position: relative;*/
+}
+
+/* line 39, ../sass/style.scss */
+.noMargin {
+  margin: 0 0;
+}
+
+/* line 43, ../sass/style.scss */
+#id {
+  background-color: #050505;
+}

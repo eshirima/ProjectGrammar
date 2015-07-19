@@ -1,0 +1,45 @@
+@import "compass";
+
+//The transistion went smoothly, and I can now use // to comment :D
+
+//I can now define pseudo-functions :D
+@mixin transformTranslate($x, $y) {
+   -webkit-transform: translate($x,$y);
+      -moz-transform: translate($x,$y);
+       -ms-transform: translate($x,$y);
+        -o-transform: translate($x,$y);
+           transform: translate($x,$y);   
+}
+
+:root {
+height:100vh;
+}
+
+.centeredHorizontally{
+	position: absolute;
+	left: 50%;
+    margin-right: -50%;
+    @include transformTranslate(-50%, 0);
+	text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.centered{
+	@extend .centeredHorizontally;              
+    top: 50%;
+    @include transformTranslate(-50%,-50%);
+}
+
+.fullContainer{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+    /*position: relative;*/
+}
+.noMargin{
+	margin: 0 0;
+}
+
+#id {
+  background-color: rgb(5,5,5);
+}
