@@ -40,4 +40,10 @@
 /* line 44, ../sass/style.scss */
 #title {
   background-color: #FFB866;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
 }
