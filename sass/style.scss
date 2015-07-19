@@ -11,9 +11,9 @@
            transform: translate($x,$y);
 }
 
-:root {
-    height: 100vh;
-}
+// :root {
+//     height: 100vh;
+// }
 
 .centeredHorizontally {
 	position: absolute;
@@ -38,8 +38,9 @@
 }
 .noMargin {
 	margin: 0 0;
+  width: 100vw;
 }
 
-#id {
-  background-color: rgb(5,5,5);
+#title {
+  background-color: #FFB866
 }
