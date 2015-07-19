@@ -18,8 +18,22 @@ _app.formSubmission = function (event) {
 
 _app.formSubmissionHandler = function (data){
    var json = JSON.parse(data);
-   var pages = json['ListPage']
+   var pages = json.ListPage.pages.LinkPage;
+   
+   var output = document.getElementById("inputarea").value;  
+
+   for (i=(pages.length-1);i>=0;i--) {
+       var p = pages[i];
+       var lt =  p['linkTitle'].split('-');
+       var start = parseInt(lt[0]);
+       var end = parseInt(lt[1])+1;
+       output = output.slice(0,start) + "<span id='" +p['@attributes']['id']+ "'>" + output.slice(start,end) 
+           + "</span>" + output.slice(end,output.length);
+       console.log(output);
+       
+   }
     
+    document.getElementById("testoutput").innerHTML = output;
 }
 
 _app.audioSubmission = function (event) {
@@ -35,7 +49,9 @@ _app.audioSubmission = function (event) {
 
 _app.audioSubmissionHandler = function (data){
    var json = JSON.parse(data);
-   var pages = json['ListPage']
+    
+   var output = document.getElementById("inputarea").value;
+   
     
 }
 
