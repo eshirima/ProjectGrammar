@@ -8,14 +8,14 @@
       -moz-transform: translate($x,$y);
        -ms-transform: translate($x,$y);
         -o-transform: translate($x,$y);
-           transform: translate($x,$y);   
+           transform: translate($x,$y);
 }
 
 :root {
-height:100vh;
+    height: 100vh;
 }
 
-.centeredHorizontally{
+.centeredHorizontally {
 	position: absolute;
 	left: 50%;
     margin-right: -50%;
@@ -24,19 +24,19 @@ height:100vh;
     margin-top: 0;
     margin-bottom: 0;
 }
-.centered{
-	@extend .centeredHorizontally;              
+.centered {
+	@extend .centeredHorizontally;
     top: 50%;
     @include transformTranslate(-50%,-50%);
 }
 
-.fullContainer{
+.fullContainer {
 	height: 100%;
 	width: 100%;
 	position: absolute;
     /*position: relative;*/
 }
-.noMargin{
+.noMargin {
 	margin: 0 0;
 }
 
